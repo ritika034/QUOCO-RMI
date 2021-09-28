@@ -18,9 +18,9 @@ public class Server {
             BrokerService brokerService = (BrokerService)
                     UnicastRemoteObject.exportObject(lbService, 0);
             // Register the object with the RMI Registry
-            registry.bind(Constants.BROKER_SERVICE, lbService);
+            registry.bind(Constants.BROKER_SERVICE, brokerService);
 
-            System.out.println("STOPPING SERVER SHUTDOWN");
+            System.out.println("BROKER Service");
             while (true) {
                 Thread.sleep(1000);
             }

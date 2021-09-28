@@ -1,5 +1,3 @@
-import javax.imageio.spi.RegisterableService;
-import java.net.ServerSocket;
 import java.rmi.AlreadyBoundException;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;

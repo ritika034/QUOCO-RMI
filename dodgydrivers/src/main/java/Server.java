@@ -18,9 +18,9 @@ public class Server {
             QuotationService quotationService = (QuotationService)
                     UnicastRemoteObject.exportObject(dodgyDriversService,0);
             // Register the object with the RMI Registry
-            registry.bind(Constants.AULD_FELLAS_SERVICE, quotationService);
+            registry.bind(Constants.DODGY_DRIVERS_SERVICE, quotationService);
 
-            System.out.println("STOPPING SERVER SHUTDOWN");
+            System.out.println("DODGYDRIVERS Service");
             while (true) {Thread.sleep(1000); }
         } catch (Exception e) {
             System.out.println("Trouble: " + e);

@@ -19,7 +19,7 @@ public class Server {
             // Register the object with the RMI Registry
             registry.bind(Constants.AULD_FELLAS_SERVICE, quotationService);
 
-            System.out.println("STOPPING SERVER SHUTDOWN");
+            System.out.println("AULDFELLAS Service");
             while (true) {Thread.sleep(1000); }
         } catch (Exception e) {
             System.out.println("Trouble: " + e);

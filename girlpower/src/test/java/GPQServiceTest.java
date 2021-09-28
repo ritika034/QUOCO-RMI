@@ -19,6 +19,7 @@ public class GPQServiceTest {
         QuotationService gpqService = new GPQService();
         try {
             registry = LocateRegistry.createRegistry(1099);
+            System.out.println("TEST");
             QuotationService quotationService = (QuotationService)
                     UnicastRemoteObject.exportObject(gpqService,0);
             registry.bind(Constants.GIRL_POWER_SERVICE, quotationService);

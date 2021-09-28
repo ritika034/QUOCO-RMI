@@ -15,12 +15,12 @@ public class Server {
                 registry = LocateRegistry.getRegistry(args[0], 1099);
             }
             // Create the Remote Object
-            QuotationService quotationService = (QuotationService)
+            QuotationService gpqQuotationService = (QuotationService)
                     UnicastRemoteObject.exportObject(gpqService,0);
             // Register the object with the RMI Registry
-            registry.bind(Constants.AULD_FELLAS_SERVICE, quotationService);
+            registry.bind(Constants.GIRL_POWER_SERVICE, gpqQuotationService);
 
-            System.out.println("STOPPING SERVER SHUTDOWN");
+            System.out.println("GIRLPOWER Service");
             while (true) {Thread.sleep(1000); }
         } catch (Exception e) {
             System.out.println("Trouble: " + e);
